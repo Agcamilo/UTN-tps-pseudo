@@ -1,0 +1,22 @@
+Elabore un algoritmo que calcule el cociente de dos enteros F y G y el Resto de la operación, empleando sólo las operaciones suma y diferencia.
+
+accion cociente
+ambiente
+	a,b,c,resto: entero;
+
+proceso
+	escribir("ingrese dos numeros separados por un espacio:");
+	leer(a);
+	leer(b);
+	c:=0;
+	mientras a>0 hacer
+		a:=a-b;
+		c:=c+1;
+		si a-b<0 hacer
+			resto:=a;
+			a=0;
+		finsi
+	finMientras;
+	escribir('el cociente es ',c);
+	escribir('el resto es ',resto);
+finAccion

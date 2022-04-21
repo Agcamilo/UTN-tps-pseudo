@@ -1,0 +1,16 @@
+accion a
+ambiente
+	isi,iq,iem:enteros;
+
+proceso
+	escribir("ingrese los alumnos egresados de isi:");
+	leer(isi);
+	escribir("ingrese los alumnos egresados de iq:");
+	leer(iq);
+	escribir("ingrese los alumnos egresados de iem:");
+	leer(iem);
+	escribir("el porcentaje de egresdos de isi es:",(isi*(isi+iem+iq))/100);
+	escribir("el porcentaje de egresdos de iq es:",(iq*(isi+iem+iq))/100);
+	escribir("el porcentaje de egresdos de iem es:",(iem*(isi+iem+iq))/100);
+
+finAccion

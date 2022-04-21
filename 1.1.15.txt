@@ -1,0 +1,35 @@
+accion edificio
+ambiente
+	altTotal,pisos,altP,x:reales;
+	pies:=3.28;
+
+proceso
+	PARA x:=1 hasta 50 hacer
+		escribir ('ingrese la cantidad de pisos del edifico n°,x);
+		leer(pisos);
+		escribir ('ingrese la altura promedio de cada piso:');
+		leer(altP);
+		altTotal:=pisos*(altP*pies);
+		escribir ('la altura del edifico es de ',altTotal,' pies');
+	FinPara
+FinAccion
+
+//con pretest
+accion edificio
+ambiente
+	altTotal,pisos,altP:reales;
+	pies:=3.28;
+	s:caracter;
+
+proceso
+	REPETIR
+		escribir ('ingrese la cantidad de pisos del edifico');
+		leer(pisos);
+		escribir ('ingrese la altura promedio de cada piso:');
+		leer(altP);
+		altTotal:=pisos*(altP*pies);
+		escribir ('la altura del edifico es de ',altTotal,' pies');
+		escribir ('desea continuar? s/n');
+		leer(s);
+	Hasta s='n' seguir
+FinAccion

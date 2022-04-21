@@ -1,0 +1,27 @@
+Teniendo en cuenta el ejercicio anterior, realizar un incremento de la variable V en forma constante y creciente recalculando los demás valores 10 veces. Por ejemplo
+V=2
+
+   V    V2    V3  
+   2     4     8
+   3     9    27
+....  ....  ....
+  12   144  1728
+
+
+accion cuadrad
+ambiente
+	v:entero;
+proceso
+	escribir("ingrese un numero:");
+	leer(v);
+	escribir("el  numero es:",v);
+	escribir("su cuadrado es:",v*v);
+	escribir("su cubo es:",v*v*v);
+	para x:=1 hasta 10 hacer
+		v=v+1;
+		escribir("el  numero es:",v);
+		escribir("su cuadrado es:",v*v);
+		escribir("su cubo es:",v*v*v);
+	FinPara
+
+finAccion

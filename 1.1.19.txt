@@ -1,0 +1,13 @@
+Escribir un algoritmo que ingrese una variable V y emita el valor de ésta, su cuadrado y su cubo.
+
+accion nose
+ambiente
+	v,cuadrado,cubo:entero;
+
+proceso
+	escribir("ingrese un numero");
+	leer(v);
+	escribir("el valor del numero es:",v);
+	escribir("su valor al cuadrado es:",v*v);
+	escribir("su valor al cubo es:".v*v*v);
+finAccion

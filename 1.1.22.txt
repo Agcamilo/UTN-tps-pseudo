@@ -1,0 +1,19 @@
+Escriba un algoritmo que determine si un número es primo.
+
+accion primo
+ambiente
+	var x,n,c:entero;
+proceso
+	escribir('ingrese un numero:');
+	leer(n);
+	c:=0;
+	para x:=1 hasta n hacer
+		si n div x = 0 entonces
+			c=c+1;
+		finsi
+	finPara
+	si c>2 entonces
+		escribir("el numero no es primo");
+	sino
+		escribir("el numero es primo");
+finAccion

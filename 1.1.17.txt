@@ -1,0 +1,23 @@
+Elabore un algoritmo que calcule el producto de dos enteros A y B empleando sólo la operación suma.
+
+accion productor
+ambiente
+	a,b,c,x,cont,c1:enteros;
+proceso
+	c:=0;
+	escribir ('ingrese un numero');
+	leer(a);
+	escribir ('ingrese otro numero');
+	leer(b);
+	si b<0 entonces
+		para c1:=b hasta 0 hacer
+			cont:=cont+1;
+		finPara
+		b:=b+cont+cont;
+	finsi
+	
+	para x:=1 hasta b hacer
+		c=a+c;
+	finPara
+	Escribir ('El producto es:',c);
+FinAccion

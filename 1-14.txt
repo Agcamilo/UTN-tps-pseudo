@@ -1,0 +1,54 @@
+accion a
+ambiente
+	variables
+	s,v,s1,sigual,smayor,sdoble,productoria:entero;
+	seguir,primervalormayor : boleano;
+proceso
+	contador:=0;
+	primervalormayor:=0;
+	productoria:=1;
+	seguir:=0;
+
+Repetir
+		Escribir  ('ingrese dos pares de numeros separados por una linea:');
+		leer s;
+		Leer v;
+
+		contador:=contador+1;
+
+		si contador = 1 Entonces
+			s1 := s;
+		FinSi
+
+		si contador>1 y s1=s Entonces
+			sigual:=sigual+1;
+		FinSi
+
+		si primervalormayor= 0 y s>v Entonces
+			smayor:=s;
+			primervalormayor:=1;
+		FinSi
+
+		si s=v*2 Entonces
+			sdoble:=sdoble+1;
+		FinSi
+
+		si v=0 Entonces
+			productoria:=productoria*s;
+		FinSi
+
+		Escribir ('desea agregar otro par? si=0 no=1');
+		leer seguir;
+
+Hasta Que seguir;
+	
+	Escribir 'la cantidad de pares que tienen el mismo valor de s son:',sigual;
+	Escribir 'el primer valor de s mayor que v es:',smayor;
+	Escribir 'en la cantidad de pares donde se cumple que s es el doble de v son:',sdoble;
+	Escribir 'productoria es:',productoria;
+	
+FinAccion
+
+
+
+
