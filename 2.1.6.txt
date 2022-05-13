@@ -1,0 +1,34 @@
+accion xd es
+ambiente
+	menh,menm,mayh,maym: secuencia de enteros;
+	meh,mem,mah,mam: enteros;
+	cant_provincias,c,cantmayh,cantmaym,cantmenh,cantmenm,poblacion: entero;
+	por_hombre_may,por_mujer_mayo,por_hombre_men,por_mujer_men: reales;
+proceso
+cant_provincias:=23;
+c:=0;
+arrancar(menh);
+arrancar(menm);
+arrancar(mayh);
+arrancar(maym);
+repetir
+	c:=c+1;
+	avz(menh,meh);
+	cantmenh:=cantmenh+meh;
+	avz(menm,mem);
+	cantmenm:= cantmenm+mem;
+	avz(mayh,mah);
+	cantmayh:= cantmayh+mah;
+	avz(maym,mam);
+	cantmaym:= cantmaym+mam;
+hasta que c = cant_provincias;
+poblacion:= cantmenh+cantmenm+cantmayh+cantmaym;
+por_hombre_may:= (cantmayh*100)/poblacion;
+por_mujer_may:= (cantmaym*100)/poblacion;
+por_hombre_men:= (cantmenh*100)/poblacion;
+por_mujer_men:= (cantmenm*100)/poblacion;
+cerrar(menh);
+cerrar(menm);
+cerrar(mayh);
+cerrar(maym);
+finAccion

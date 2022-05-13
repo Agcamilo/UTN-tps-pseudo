@@ -1,0 +1,27 @@
+accion 2110 es
+ambiente
+	s: secuencia de caracteres;
+	n,letra: caracter;
+	cant_pal: entero;
+	flag: booleano;
+proceso
+arrancar(s);
+letra:= 'c';
+avz(s,n);
+cant_pal:=0;
+flag:=verdadero;
+mientras nfds(s) hacer
+	si flag entonces
+		si n = letra entonces
+			cant_pal=cant_pal+1;
+		finsi
+		flag:=falso;
+	finsi
+	avz(s,n);
+	si n = ' ' entonces
+		flag:=verdadero;
+		avz(s,n);
+	finsi
+finmientras
+cerrar(s);	
+finAccion
